@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Box from './Box';
+import { GameBoard } from './organisms';
 import reportWebVitals from './reportWebVitals';
-import { Canvas } from 'react-three-fiber';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-    </Canvas>
+      <GameBoard />
   </React.StrictMode>,
   document.getElementById('root')
 );
