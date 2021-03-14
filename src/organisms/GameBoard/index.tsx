@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Box from '../../atoms/Box';
+import BalanceBar from '../../molecules/BalanceBar';
 import Board from '../../molecules/Board';
 // import Plane from '../../atoms/Plane';
 
@@ -22,7 +23,9 @@ const GameBoard = (): JSX.Element => {
                 castShadow
             />
             <Suspense fallback={<>Loading</>}>
+                <BalanceBar position={[0, -8, -10]} />
                 <Board />
+                <BalanceBar />
             </Suspense>
             {/* <Plane rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -10, 0]} /> */}
             <ambientLight />
